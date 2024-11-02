@@ -2909,7 +2909,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.2.6", "@types/react@~18.2.45":
+"@types/react@*", "@types/react@^18.2.6", "@types/react@>=18.0.0", "@types/react@~18.2.45":
   "integrity" "sha512-RwGAGXPl9kSXwdNTafkOEuFrTBD5SA2B3iEB96xi8+xu5ddUa/cpvyVCSNn+asgLCTHkb5ZxN8gbuibYJi4s1w=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-18.2.79.tgz"
   "version" "18.2.79"
@@ -5176,6 +5176,11 @@
   dependencies:
     "expo-constants" "~16.0.0"
     "invariant" "^2.2.4"
+
+"expo-location@^17.0.1":
+  "integrity" "sha512-m+OzotzlAXO3ZZ1uqW5GC25nXW868zN+ROyBA1V4VF6jGay1ZEs4URPglCVUDzZby2F5wt24cMzqDKw2IX6nRw=="
+  "resolved" "https://registry.npmjs.org/expo-location/-/expo-location-17.0.1.tgz"
+  "version" "17.0.1"
 
 "expo-modules-autolinking@>=0.8.1", "expo-modules-autolinking@1.11.3":
   "integrity" "sha512-oYh8EZEvYF5TYppxEKUTTJmbr8j7eRRnrIxzZtMvxLTXoujThVPMFS/cbnSnf2bFm1lq50TdDNABhmEi7z0ngQ=="
@@ -8839,7 +8844,7 @@
     "react-shallow-renderer" "^16.15.0"
     "scheduler" "^0.23.0"
 
-"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 17.0.1", "react@>=16.8", "react@>=16.8.0", "react@>=17.0.0", "react@>=18", "react@>=18 || >=19.0.0-beta", "react@18.2.0":
+"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 17.0.1", "react@>=16.8", "react@>=16.8.0", "react@>=17.0.0", "react@>=18", "react@>=18 || >=19.0.0-beta", "react@>=18.0.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -10366,7 +10371,7 @@
   "resolved" "https://registry.npmjs.org/use-latest-callback/-/use-latest-callback-0.2.1.tgz"
   "version" "0.2.1"
 
-"use-sync-external-store@^1.1.0", "use-sync-external-store@^1.2.0":
+"use-sync-external-store@^1.1.0", "use-sync-external-store@^1.2.0", "use-sync-external-store@>=1.2.0":
   "integrity" "sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw=="
   "resolved" "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.2.tgz"
   "version" "1.2.2"
@@ -10822,3 +10827,8 @@
   "integrity" "sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g=="
   "resolved" "https://registry.npmjs.org/zod/-/zod-3.23.8.tgz"
   "version" "3.23.8"
+
+"zustand@^5.0.1":
+  "integrity" "sha512-pRET7Lao2z+n5R/HduXMio35TncTlSW68WsYBq2Lg1ASspsNGjpwLAsij3RpouyV6+kHMwwwzP0bZPD70/Jx/w=="
+  "resolved" "https://registry.npmjs.org/zustand/-/zustand-5.0.1.tgz"
+  "version" "5.0.1"

@@ -2,7 +2,10 @@ import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
 import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constants";
+import { useLocationStore } from "@/store";
 import { useUser } from "@clerk/clerk-expo";
+import { useEffect, useState } from "react";
+import * as Location from "expo-location";
 import {
   ActivityIndicator,
   FlatList,
@@ -121,17 +124,42 @@ const recentRides = [
 ];
 
 export default function Page() {
+  const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
-  console.log("user", user);
   const loading = false;
 
-  const handleSignOut = () => {
-    // signOut();
-  };
+  const [hasPermissions, setHasPermissions] = useState(false);
+
+  const handleSignOut = () => {};
 
   const handleDestinationPress = () => {
     console.log("Destination pressed");
   };
+
+  useEffect(() => {
+    const requestLocation = async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        setHasPermissions(false);
+        return;
+      }
+      setHasPermissions(true);
+      let location = await Location.getCurrentPositionAsync({});
+      console.log("location", location);
+      const address = await Location.reverseGeocodeAsync({
+        latitude: location.coords?.latitude!,
+        longitude: location.coords?.longitude!,
+      });
+      console.log("address", address);
+      setUserLocation({
+        latitude: -34.612059,
+        longitude: -58.364804,
+        address: `${address[0].name}, ${address[0].region}`,
+      });
+    };
+
+    requestLocation();
+  }, []);
 
   return (
     <SafeAreaView className="bg-general-500">
