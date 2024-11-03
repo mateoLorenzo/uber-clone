@@ -23,6 +23,8 @@ const GoogleTextInput = ({
         debounce={200}
         textInputProps={{
           placeholderTextColor: "gray",
+          fontWeight: "medium",
+          fontSize: 14,
           placeholder: initialLocation ?? "Where you want to go?",
         }}
         styles={{
