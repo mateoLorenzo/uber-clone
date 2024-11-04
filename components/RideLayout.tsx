@@ -9,11 +9,9 @@ import BottomSheet, { BottomSheetView } from "@gorhom/bottom-sheet";
 const RideLayout = ({
   title,
   children,
-  snapPoints,
 }: {
   title: string;
   children: React.ReactNode;
-  snapPoints?: string[];
 }) => {
   const bottomSheetRef = useRef<BottomSheet>(null);
   return (
@@ -36,11 +34,7 @@ const RideLayout = ({
           </View>
           <Map />
         </View>
-        <BottomSheet
-          ref={bottomSheetRef}
-          snapPoints={snapPoints || ["40%", "85%"]}
-          index={0}
-        >
+        <BottomSheet ref={bottomSheetRef} snapPoints={["25%", "85%"]} index={1}>
           <BottomSheetView style={{ flex: 1, padding: 20 }}>
             {children}
           </BottomSheetView>

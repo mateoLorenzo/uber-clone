@@ -8,7 +8,7 @@ import { FlatList, Text, View } from "react-native";
 const ConfirmRide = () => {
   const { drivers, selectedDriver, setSelectedDriver } = useDriverStore();
   return (
-    <RideLayout title="Choose a Driver" snapPoints={["65%", "85%"]}>
+    <RideLayout title="Choose a Driver">
       <FlatList
         data={drivers}
         renderItem={({ item }) => (
@@ -21,6 +21,7 @@ const ConfirmRide = () => {
         ListFooterComponent={() => (
           <View className="mx-5 mt-10">
             <CustomButton
+              disabled={!selectedDriver}
               title="Select Ride"
               onPress={() => router.push("/(root)/book-ride")}
             />
