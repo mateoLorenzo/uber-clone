@@ -37,8 +37,8 @@ export const calculateRegion = ({
 }) => {
   if (!userLatitude || !userLongitude) {
     return {
-      latitude: -34.612059,
-      longitude: -58.364804,
+      latitude: -38.000737,
+      longitude: -57.548835,
       latitudeDelta: 0.01,
       longitudeDelta: 0.01,
     };
